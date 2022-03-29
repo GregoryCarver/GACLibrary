@@ -2,7 +2,7 @@
 #include "VertexBuffer.h"
 #include "ElementBuffer.h"
 
-//Class description in cpp file
+//Vertex array class to create, bind, unbind, and delete vertex arrays. Also creates the associated attribute pointers when adding buffers. Class description in cpp file
 class VertexArray
 {
 private:
@@ -13,6 +13,8 @@ public:
 	~VertexArray();
 
 	void AddBuffer(VertexBuffer& vbo, unsigned int attribCount);
+	void AddBuffer(VertexBuffer& vbo);
+	void AddBuffer(std::vector<Vertex>& vertices);
 	void Bind() const;
 	void Unbind() const;
 };
