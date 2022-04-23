@@ -1,6 +1,6 @@
 #pragma once
 
-//Class description in cpp file
+//Element buffer class to create, bind, unbind, and delete element buffers. Class description in cpp file
 class ElementBuffer
 {
 private:

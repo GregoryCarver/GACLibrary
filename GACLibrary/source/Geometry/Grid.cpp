@@ -1,5 +1,10 @@
 #include "Geometry/Grid.h"
 
+/*******************************************************************************************************************************************************
+* Class used to create grid of lines, can be used in things like signifying the x-y plane, or any case a grid may be useful
+* 
+* TODO: make grid store its own vertices, that way getting vertices is more efficient
+*******************************************************************************************************************************************************/
 Grid::Grid(unsigned int width, unsigned int length, float transparency)
 {
 	for (unsigned int i = 0; i < width + 1; i++)
@@ -23,4 +28,22 @@ std::vector<Vertex> Grid::GetVertices()
 	}
 
 	return vertices;
+}
+
+unsigned int Grid::GetVAO()
+{
+	return VAO;
+}
+
+void Grid::SetVAO(unsigned int VAOID)
+{
+	this->VAO = VAOID;
+}
+
+void Grid::Transform(glm::mat4 transformationMatrix)
+{
+	for (Line& line : lines)
+	{
+		line.Transform(transformationMatrix);
+	}
 }

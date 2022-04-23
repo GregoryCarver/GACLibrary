@@ -1,1 +1,11 @@
-﻿  GACLibrary.vcxproj -> C:\Dev\Visual Studio Projects\GACLibrary\Debug\GACLibrary.exe
+﻿  main.cpp
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(238,23): warning C4018: '<': signed/unsigned mismatch
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(271,27): warning C4018: '<': signed/unsigned mismatch
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(369,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(414,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(415,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(419,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(420,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(422,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Dev\Visual Studio Projects\GACLibrary\GACLibrary\source\main.cpp(423,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  GACLibrary.vcxproj -> C:\Dev\Visual Studio Projects\GACLibrary\Debug\GACLibrary.exe

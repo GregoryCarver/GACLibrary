@@ -9,7 +9,7 @@
 #include <sstream>
 #include <iostream>
 
-//Class description in cpp file
+//Shader class that contains the shader program ID, and functions to use the program and update uniforms. Class description in cpp file
 class Shader
 {
 private:

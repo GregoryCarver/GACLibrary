@@ -17,7 +17,8 @@ Line::Line(Color color, Vertex start, Vertex end)
 	this->start = start;
 	this->end = end;
 
-	switch (color)
+	//Need to make color more robust, line shouldn't be manipulating the components of vertices(I think)
+	/*switch (color)
 	{
 	case RED:
 		start.r = end.r = 1.0f;
@@ -42,7 +43,7 @@ Line::Line(Color color, Vertex start, Vertex end)
 		break;
 	default:
 		break;
-	}
+	}*/
 }
 
 Line::Line(float startX, float startY, float startZ, float endX, float endY, float endZ, float transparency)
@@ -64,4 +65,10 @@ Vertex Line::GetEnd()
 std::vector<Vertex> Line::GetVertices()
 {
 	return std::vector<Vertex>{start, end};
+}
+
+void Line::Transform(glm::mat4 transformationMatrix)
+{
+	start.Transform(transformationMatrix);
+	end.Transform(transformationMatrix);
 }

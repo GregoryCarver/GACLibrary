@@ -152,8 +152,11 @@
   <ItemGroup>
     <ClCompile Include="glm\detail\glm.cpp" />
     <ClCompile Include="source\ElementBuffer.cpp" />
+    <ClCompile Include="source\Geometry\DoubleArrow.cpp" />
+    <ClCompile Include="source\Geometry\Graph.cpp" />
     <ClCompile Include="source\Geometry\Grid.cpp" />
     <ClCompile Include="source\Geometry\Line.cpp" />
+    <ClCompile Include="source\Geometry\Point.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Shader.cpp" />
     <ClCompile Include="source\Vertex.cpp" />
@@ -408,8 +411,12 @@
     <ClInclude Include="glm\vector_relational.hpp" />
     <ClInclude Include="header\Camera.h" />
     <ClInclude Include="header\ElementBuffer.h" />
+    <ClInclude Include="header\Geometry\DoubleArrow.h" />
+    <ClInclude Include="header\Geometry\Graph.h" />
     <ClInclude Include="header\Geometry\Grid.h" />
     <ClInclude Include="header\Geometry\Line.h" />
+    <ClInclude Include="header\Geometry\Point.h" />
+    <ClInclude Include="header\Math\GACMath.h" />
     <ClInclude Include="header\Shader.h" />
     <ClInclude Include="header\Vertex.h" />
     <ClInclude Include="header\VertexBuffer.h" />
@@ -552,6 +559,7 @@
     <None Include="glm\gtx\wrap.inl" />
     <None Include="glm\out\build\x64-Debug\CMakeFiles\3.16.19112601-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
     <None Include="glm\out\build\x64-Debug\CMakeFiles\3.16.19112601-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="resources\shaders\CameraInstanceShader.vert" />
     <None Include="resources\shaders\CameraShader.vert" />
     <None Include="resources\shaders\SimpleFragmentShader.frag" />
     <None Include="resources\shaders\SimpleVertexShader.vert" />
