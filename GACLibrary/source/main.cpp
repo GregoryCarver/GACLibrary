@@ -105,28 +105,6 @@ int main(void)
     /******************************************** EXAMPLE       GEOMETRY       START ******************************************/
     /*                                                                                                                        */
     /**************************************************************************************************************************/
-    float vertices[] =
-    {
-        //positions             //colors
-        0.5f,  0.5f, 0.1f,      0.7f, 0.0f, 0.0f,      //top right
-        0.5f, -0.5f, 0.1f,      0.7f, 0.0f, 0.0f,      //bottom right
-       -0.5f, -0.5f, 0.1f,      0.7f, 0.0f, 0.0f,      //bottom left
-       -0.5f,  0.5f, 0.1f,      0.7f, 0.0f, 0.0f       //top left
-    };
-    float vertices2[] =
-    {
-        //positions             //colors
-        0.5f,  0.5f,  0.0f,      0.0f, 0.5f, 0.7f,      //top right
-        0.5f, -0.5f,  0.0f,      0.0f, 0.5f, 0.7f,      //bottom right
-       -0.5f, -0.5f,  0.0f,      0.0f, 0.5f, 0.7f,      //bottom left
-       -0.5f,  1.0f, -0.2f,      0.0f, 0.5f, 0.7f       //top left
-    };
-
-    unsigned int indices[]
-    {
-        0, 1, 3,    //first triangle
-        1, 2, 3     //second triangle
-    };
 
     //Test objects
     Grid worldGrid = Grid(1000, 1000, 0.25f);
@@ -135,13 +113,13 @@ int main(void)
     testGraphs.push_back(Graph(2.0f, 1.0f, -0.0f, 1.0f));
     testGraphs.push_back(Graph(0.0f, 0.0f, -1.0f, 1.0f))*/;
     float scale = 1.0f;
-    for (int i = -10; i < 11; i += 2)
+    /*for (int i = -10; i < 0; i += 2)
     {
-        for (int j = 0; j < 21; j += 2)
+        for (int j = 0; j < 11; j += 2)
         {
             testGraphs.push_back(Graph((float)i, (float)j, 5.0f, scale));
         }
-    }
+    }*/
 
     testGraphs.push_back(Graph(0.0f, 0.0f, -1.0f, 1.0f));
 
@@ -240,6 +218,10 @@ int main(void)
         ts.push_back((float)(rand() % 7));
     }
     /* Loop until the user closes the window */
+    //testGraphs[0].PlotFunction(2, 200, ts[0]);
+            /**************************TESTING INSTANCES*****************************/
+    std::vector<Vertex> graphVerts2 = testGraphs[0].GetVertices();
+    graphVertexArray.UpdateBuffer(graphVerts2, 0);
     while (!glfwWindowShouldClose(window))
     {
         //Process Input
@@ -268,13 +250,15 @@ int main(void)
         glUniformMatrix4fv(glGetUniformLocation(instanceShader.GetID(), "projection"), 1, GL_FALSE, &projection[0][0]);
         glUniformMatrix4fv(glGetUniformLocation(instanceShader.GetID(), "view"), 1, GL_FALSE, &view[0][0]);
         graphVertexArray.Bind();
+
         for (int i = 0; i < testGraphs.size(); i++)
         {
-            testGraphs[i].PlotFunction(0, 20, ts[i]);
-            /**************************TESTING INSTANCES*****************************/
-            std::vector<Vertex> graphVerts = testGraphs[i].GetVertices();
-            graphVertexArray.UpdateBuffer(graphVerts, 0);
+            //testGraphs[i].PlotFunction(0, 100, ts[0]);
+            ///**************************TESTING INSTANCES*****************************/
+            //std::vector<Vertex> graphVerts = testGraphs[i].GetVertices();
+            //graphVertexArray.UpdateBuffer(graphVerts, 0);
             
+
             //graphVertexArray.AddAttribPointer(0, sizeof(graphVerts[0].position), sizeof(Vertex), 0);
             //graphVertexArray.AddAttribPointer(1, sizeof(graphVerts[0].color), sizeof(Vertex), sizeof(graphVerts[0].position));
 
@@ -321,7 +305,7 @@ int main(void)
 
         for (float& t : ts)
         {
-            t = t + 0.1f;
+            t = t + 0.01f;
             if (t > 6.28f) { t = 0.0f; }
         }
         

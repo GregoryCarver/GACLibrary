@@ -1238,5 +1238,7 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="resources\shaders\CameraInstanceShader.vert" />
+    <None Include="resources\shaders\PointsShader.geom" />
+    <None Include="source\README.md" />
   </ItemGroup>
 </Project>

@@ -561,8 +561,10 @@
     <None Include="glm\out\build\x64-Debug\CMakeFiles\3.16.19112601-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
     <None Include="resources\shaders\CameraInstanceShader.vert" />
     <None Include="resources\shaders\CameraShader.vert" />
+    <None Include="resources\shaders\PointsShader.geom" />
     <None Include="resources\shaders\SimpleFragmentShader.frag" />
     <None Include="resources\shaders\SimpleVertexShader.vert" />
+    <None Include="source\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
